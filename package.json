@@ -1,0 +1,27 @@
+{
+  "name": "eldertree-docs",
+  "version": "0.1.0",
+  "description": "Documentation and incident runbook for the eldertree Kubernetes cluster",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview ."
+  },
+  "keywords": [
+    "kubernetes",
+    "k3s",
+    "raspberry-pi",
+    "runbook",
+    "troubleshooting",
+    "documentation"
+  ],
+  "author": "Rafael Oliveira",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "mermaid": "^11.12.2"
+  }
+}
+
+
