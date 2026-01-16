@@ -1,0 +1,104 @@
+# Eldertree Docs - Cursor Rules
+
+## Workspace
+
+See `../workspace-config/docs/PROJECT_CONVENTIONS.md` for shared conventions (git workflow, CHANGELOG).
+
+## Commands
+
+```bash
+# Development
+npm install                  # Install dependencies
+npm run dev                  # Start dev server (http://localhost:5173)
+npm run build                # Build for production
+npm run preview              # Preview production build
+
+# Linting (run after changes)
+npm run lint                 # Lint markdown (if configured)
+```
+
+## Workflow
+
+1. Always preview changes locally before pushing
+2. Update CHANGELOG.md for content additions
+3. Never run git commands at workspace root
+
+## Project Overview
+
+VitePress-based documentation and runbook for the eldertree Kubernetes cluster. Agent-compatible format for quick issue resolution.
+
+```
+eldertree-docs/
+├── .vitepress/        # VitePress configuration
+│   ├── config.ts     # Site configuration
+│   └── sidebar.ts    # Navigation sidebar
+├── runbook/          # Issue runbook
+│   ├── index.md      # Overview & symptom table
+│   ├── workflow.md   # Agent instructions
+│   └── issues/       # Issue files by category
+│       ├── dns/      # DNS-001, PIHOLE-001
+│       ├── node/     # NODE-001 to NODE-004, K3S-001
+│       ├── boot/     # BOOT-001 to BOOT-004, EMERG-001 to EMERG-004
+│       ├── network/  # NET-001 to NET-004
+│       └── ssh/      # SSH-001 to SSH-003
+├── scripts/          # Migration utilities
+└── index.md          # Homepage
+```
+
+## Issue File Format
+
+Each runbook issue uses YAML frontmatter:
+
+```markdown
+---
+id: CATEGORY-NNN
+title: Short Description
+category: category-name
+severity: critical|high|medium|low
+symptoms:
+  - searchable symptom text
+---
+
+# CATEGORY-NNN: Short Description
+
+## Error Messages (Searchable)
+- `exact error message for search`
+
+## Resolution
+Step-by-step fix instructions.
+
+## Verification
+Commands to confirm the fix.
+```
+
+## Common Tasks
+
+### Adding New Issue
+
+1. Create file in `runbook/issues/<category>/<ID>.md`
+2. Use frontmatter format above
+3. Include exact error messages for searchability
+4. Add verification commands
+5. Update `runbook/index.md` symptom table
+
+### Updating Sidebar
+
+Edit `.vitepress/sidebar.ts` to add new pages to navigation.
+
+## Code Style
+
+**Markdown**: See `runbook/issues/dns/DNS-001.md` for canonical issue format.
+
+**VitePress Config**: See `.vitepress/config.ts` for site configuration patterns.
+
+## Deployment
+
+- **GitHub Pages**: Auto-deploys on push to main via `.github/workflows/deploy.yml`
+- **Public URL**: https://docs.eldertree.xyz
+- **Local Network**: https://docs.eldertree.local (via K8s ingress)
+
+## Key Design Decisions
+
+- **Searchable**: Error messages included for VitePress local search
+- **Agent-Compatible**: Structured format for AI agents to find/resolve issues
+- **Dual Deployment**: Public (GitHub Pages) + local network (Kubernetes)
