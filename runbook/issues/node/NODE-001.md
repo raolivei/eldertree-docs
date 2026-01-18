@@ -17,10 +17,10 @@ _Add exact error messages from this document here for searchability_
 
 ## Current Issues
 
-### Issue 1: node-0 NotReady and Unreachable
+### Issue 1: node-1 NotReady and Unreachable
 
 **Symptoms:**
-- node-0.eldertree.local shows as `NotReady`
+- node-1.eldertree.local shows as `NotReady`
 - Last heartbeat: ~5 days ago (2026-01-03)
 - Cannot ping or SSH to 192.168.2.100
 - Status: `NodeStatusUnknown` - "Kubelet stopped posting node status"
@@ -31,19 +31,19 @@ _Add exact error messages from this document here for searchability_
 
 **Solution Options:**
 
-#### Option A: Remove node-0 (Recommended if node is no longer in use)
+#### Option A: Remove node-1 (Recommended if node is no longer in use)
 
 ```bash
 export KUBECONFIG=~/.kube/config-eldertree
 
-# Drain node-0 (if possible)
-kubectl drain node-0.eldertree.local --ignore-daemonsets --delete-emptydir-data --force
+# Drain node-1 (if possible)
+kubectl drain node-1.eldertree.local --ignore-daemonsets --delete-emptydir-data --force
 
 # Delete node from cluster
-kubectl delete node node-0.eldertree.local
+kubectl delete node node-1.eldertree.local
 ```
 
-#### Option B: Recover node-0 (If node should be active)
+#### Option B: Recover node-1 (If node should be active)
 
 1. **Physical check:**
    - Verify node is powered on
@@ -69,7 +69,7 @@ kubectl delete node node-0.eldertree.local
 ### Issue 2: IP Address Conflict
 
 **Symptoms:**
-- node-0 and node-1 both have InternalIP: `10.0.0.1`
+- node-1 and node-1 both have InternalIP: `10.0.0.1`
 - node-2 and node-3 both have InternalIP: `10.0.0.3`
 
 **Root Cause:**
@@ -102,10 +102,10 @@ According to cluster documentation:
 **Symptoms:**
 - node-1 shows `EtcdIsVoter: False`
 - Message: "Node is not a member of the etcd cluster"
-- etcd annotations show node-0's name
+- etcd annotations show node-1's name
 
 **Root Cause:**
-- node-1 was configured with node-0's hostname in etcd
+- node-1 was configured with node-1's hostname in etcd
 - node-1 may not be properly joined to etcd cluster
 
 **Solution:**
@@ -120,7 +120,7 @@ According to cluster documentation:
    - This is complex and may require cluster reconfiguration
    - Since node-1 is Ready and working, this may be acceptable if only node-1 is the control plane
 
-3. **If node-0 is removed, node-1 should become the primary etcd member**
+3. **If node-1 is removed, node-1 should become the primary etcd member**
 
 ## Diagnostic Commands
 
@@ -128,14 +128,14 @@ According to cluster documentation:
 ```bash
 export KUBECONFIG=~/.kube/config-eldertree
 kubectl get nodes -o wide
-kubectl describe node node-0.eldertree.local
+kubectl describe node node-1.eldertree.local
 kubectl describe node node-1.eldertree.local
 ```
 
 ### Check Network Connectivity
 ```bash
 # Ping test
-ping -c 3 192.168.2.100  # node-0
+ping -c 3 192.168.2.100  # node-1
 ping -c 3 192.168.2.101  # node-1
 
 # SSH test
@@ -176,7 +176,7 @@ cd ~/WORKSPACE/raolivei/pi-fleet
 ## Recommended Actions
 
 1. **Immediate:**
-   - ✅ Remove node-0 from cluster (it's been unreachable for 5 days)
+   - ✅ Remove node-1 from cluster (it's been unreachable for 5 days)
    - ✅ Verify node-1 is functioning correctly
    - ✅ Fix node-2 IP address (10.0.0.2 instead of 10.0.0.3)
 
@@ -196,7 +196,7 @@ cd ~/WORKSPACE/raolivei/pi-fleet
 - ✅ node-3.eldertree.local (Ready) - Worker
 
 **Problem Nodes:**
-- ❌ node-0.eldertree.local (NotReady) - Unreachable, should be removed
+- ❌ node-1.eldertree.local (NotReady) - Unreachable, should be removed
 - ⚠️  node-2.eldertree.local (NotReady) - IP conflict, needs fix
 
 ## Related Documentation
