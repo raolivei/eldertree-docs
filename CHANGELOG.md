@@ -23,5 +23,9 @@ After **1.0.0** release:
 - Runbook system with searchable issue files
 - Migration of troubleshooting docs from pi-fleet
 - Dual deployment support (GitHub Pages + Kubernetes)
+- **NET-006**: Tailscale/k3s routing table conflict runbook entry
+  - Documents routing table 52 conflict with k3s CNI
+  - Includes diagnosis, resolution, and systemd persistence fix
+  - Cross-references SwimTO troubleshooting docs
 
 

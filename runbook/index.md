@@ -27,6 +27,9 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 | K3s service not starting | [K3S-001](/runbook/issues/node/K3S-001) |
 | Network connectivity lost | [NET-001](/runbook/issues/network/NET-001), [NET-002](/runbook/issues/network/NET-002) |
 | Netplan configuration issues | [NET-003](/runbook/issues/network/NET-003) |
+| MetalLB VIP not responding | [NET-005](/runbook/issues/network/NET-005) |
+| Cross-node pod communication failing | [NET-006](/runbook/issues/network/NET-006) |
+| DNS fails inside pods (Tailscale) | [NET-006](/runbook/issues/network/NET-006) |
 
 ### By Category
 
@@ -61,6 +64,8 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 - [NET-002: Node 1 Network Recovery](/runbook/issues/network/NET-002)
 - [NET-003: Post-Netplan Fix](/runbook/issues/network/NET-003)
 - [NET-004: Preventing Network Issues](/runbook/issues/network/NET-004)
+- [NET-005: MetalLB VIP Not Responding](/runbook/issues/network/NET-005)
+- [NET-006: Tailscale/k3s Routing Conflict](/runbook/issues/network/NET-006)
 
 #### Storage Issues
 - [VAULT-001: Vault Recovery](/runbook/issues/storage/VAULT-001)
