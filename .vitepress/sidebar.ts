@@ -28,6 +28,14 @@ export function sidebar() {
         collapsed: false,
         items: [
           { text: "CF-001: Tunnel Troubleshooting", link: "/runbook/issues/cloudflare/CF-001" },
+          { text: "CF-002: Origin Certificates", link: "/runbook/issues/cloudflare/CF-002" },
+        ],
+      },
+      {
+        text: "HA & Failover",
+        collapsed: false,
+        items: [
+          { text: "HA-001: Node Failure Recovery", link: "/runbook/issues/ha/HA-001" },
         ],
       },
       {
@@ -76,6 +84,7 @@ export function sidebar() {
         collapsed: false,
         items: [
           { text: "VAULT-001: Vault Recovery", link: "/runbook/issues/storage/VAULT-001" },
+          { text: "LONGHORN-001: Longhorn Storage", link: "/runbook/issues/storage/LONGHORN-001" },
         ],
       },
       {
