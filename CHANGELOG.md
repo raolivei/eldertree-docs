@@ -8,10 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Versioning
 
 While in **pre-1.0** development:
+
 - MINOR version bumps may include breaking changes
 - PATCH version bumps are for backwards-compatible bug fixes
 
 After **1.0.0** release:
+
 - MAJOR version bumps for breaking changes
 - MINOR version bumps for new features (backwards-compatible)
 - PATCH version bumps for bug fixes (backwards-compatible)
@@ -19,6 +21,7 @@ After **1.0.0** release:
 ## [Unreleased]
 
 ### Added
+
 - Initial VitePress documentation site structure
 - Runbook system with searchable issue files
 - Migration of troubleshooting docs from pi-fleet
@@ -42,5 +45,3 @@ After **1.0.0** release:
   - Vault storage and ExternalSecrets integration
   - Ingress TLS configuration
   - Troubleshooting 502 errors with Full (strict) SSL mode
-
-

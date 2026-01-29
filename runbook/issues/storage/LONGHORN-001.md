@@ -29,6 +29,7 @@ Volume degraded
 ### 1. Multi-Attach Error After Node Failure
 
 **Symptoms:**
+
 - Pod stuck in `ContainerCreating`
 - Event shows "Multi-Attach error for volume"
 - Old node is NotReady but volume still attached
@@ -58,6 +59,7 @@ kubectl delete pod <pod-name> -n <namespace> --force --grace-period=0
 ### 2. Volume Degraded State
 
 **Symptoms:**
+
 - `kubectl get volumes.longhorn.io` shows `ROBUSTNESS: degraded`
 - One node is down or has storage issues
 
@@ -81,6 +83,7 @@ kubectl get volumes.longhorn.io -n longhorn-system \
 ### 3. Instance Manager PDB Blocking Node Drain
 
 **Symptoms:**
+
 - `kubectl drain` hangs forever
 - Error: "Cannot evict pod as it would violate the pod's disruption budget"
 - Pod is `longhorn-system/instance-manager-xxx`
@@ -102,6 +105,7 @@ kubectl drain <node> --delete-emptydir-data --ignore-daemonsets --force --disabl
 ### 4. Longhorn Node Not Schedulable
 
 **Symptoms:**
+
 - New volumes won't schedule on a node
 - Longhorn UI shows node as "unschedulable"
 
@@ -143,7 +147,7 @@ defaultSettings:
   nodeDrainPolicy: "block-if-contains-last-replica"
   nodeDownPodDeletionPolicy: "delete-both-statefulset-and-deployment-pod"
   replicaAutoBalance: "best-effort"
-  replicaSoftAntiAffinity: "false"  # Hard anti-affinity
+  replicaSoftAntiAffinity: "false" # Hard anti-affinity
 ```
 
 ## Monitoring
