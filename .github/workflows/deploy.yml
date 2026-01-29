@@ -18,7 +18,7 @@ concurrency:
 jobs:
   # Deploy to GitHub Pages
   pages:
-    uses: raolivei/github-workflows/.github/workflows/static-site-pages.yml@1-implement-reusable-workflows
+    uses: raolivei/github-workflows/.github/workflows/static-site-pages.yml@main
     with:
       node-version: "20"
       build-command: "npm run build"
@@ -26,7 +26,7 @@ jobs:
 
   # Build and push Docker image
   docker:
-    uses: raolivei/github-workflows/.github/workflows/docker-build.yml@1-implement-reusable-workflows
+    uses: raolivei/github-workflows/.github/workflows/docker-build.yml@main
     with:
       image-name: eldertree-docs
     secrets:
