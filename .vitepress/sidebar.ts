@@ -174,6 +174,16 @@ export function sidebar() {
           },
         ],
       },
+      {
+        text: "CI/CD Issues",
+        collapsed: false,
+        items: [
+          {
+            text: "CICD-001: Reusable Workflows",
+            link: "/runbook/issues/cicd/CICD-001",
+          },
+        ],
+      },
     ],
   };
 }

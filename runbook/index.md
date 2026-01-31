@@ -30,6 +30,9 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 | MetalLB VIP not responding | [NET-005](/runbook/issues/network/NET-005) |
 | Cross-node pod communication failing | [NET-006](/runbook/issues/network/NET-006) |
 | DNS fails inside pods (Tailscale) | [NET-006](/runbook/issues/network/NET-006) |
+| GitHub workflow fails | [CICD-001](/runbook/issues/cicd/CICD-001) |
+| Reusable workflow not found | [CICD-001](/runbook/issues/cicd/CICD-001) |
+| Docker build fails in CI | [CICD-001](/runbook/issues/cicd/CICD-001) |
 
 ### By Category
 
@@ -74,6 +77,9 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 - [SSH-001: SSH Permission Denied](/runbook/issues/ssh/SSH-001)
 - [SSH-002: SSH Recovery](/runbook/issues/ssh/SSH-002)
 - [SSH-003: Locked Root Recovery](/runbook/issues/ssh/SSH-003)
+
+#### CI/CD Issues
+- [CICD-001: Reusable Workflow Issues](/runbook/issues/cicd/CICD-001)
 
 ## Adding New Issues
 
