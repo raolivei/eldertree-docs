@@ -11,39 +11,44 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 
 ### By Symptom
 
-| Symptom | Possible Issues |
-|---------|-----------------|
-| HTTP 530 from Cloudflare | [CF-001](/runbook/issues/cloudflare/CF-001) |
-| `dial udp 10.43.0.10:53 i/o timeout` | [CF-001](/runbook/issues/cloudflare/CF-001), [DNS-001](/runbook/issues/dns/DNS-001) |
-| CoreDNS pod not running | [DNS-001](/runbook/issues/dns/DNS-001) |
-| nslookup fails inside pods | [DNS-001](/runbook/issues/dns/DNS-001), [PIHOLE-001](/runbook/issues/dns/PIHOLE-001) |
-| Node unreachable | [NODE-001](/runbook/issues/node/NODE-001), [NET-001](/runbook/issues/network/NET-001) |
-| Node has multiple IPs | [NODE-002](/runbook/issues/node/NODE-002), [NODE-003](/runbook/issues/node/NODE-003) |
-| Boot failure / emergency mode | [BOOT-001](/runbook/issues/boot/BOOT-001), [EMERG-001](/runbook/issues/boot/EMERG-001) |
-| NVMe boot issues | [BOOT-003](/runbook/issues/boot/BOOT-003) |
-| SSH permission denied | [SSH-001](/runbook/issues/ssh/SSH-001) |
-| Root account locked | [SSH-003](/runbook/issues/ssh/SSH-003) |
-| Vault sealed / unavailable | [VAULT-001](/runbook/issues/storage/VAULT-001) |
-| K3s service not starting | [K3S-001](/runbook/issues/node/K3S-001) |
-| Network connectivity lost | [NET-001](/runbook/issues/network/NET-001), [NET-002](/runbook/issues/network/NET-002) |
-| Netplan configuration issues | [NET-003](/runbook/issues/network/NET-003) |
-| MetalLB VIP not responding | [NET-005](/runbook/issues/network/NET-005) |
-| Cross-node pod communication failing | [NET-006](/runbook/issues/network/NET-006) |
-| DNS fails inside pods (Tailscale) | [NET-006](/runbook/issues/network/NET-006) |
-| GitHub workflow fails | [CICD-001](/runbook/issues/cicd/CICD-001) |
-| Reusable workflow not found | [CICD-001](/runbook/issues/cicd/CICD-001) |
-| Docker build fails in CI | [CICD-001](/runbook/issues/cicd/CICD-001) |
+| Symptom                              | Possible Issues                                                                        |
+| ------------------------------------ | -------------------------------------------------------------------------------------- |
+| HTTP 530 from Cloudflare             | [CF-001](/runbook/issues/cloudflare/CF-001)                                            |
+| `dial udp 10.43.0.10:53 i/o timeout` | [CF-001](/runbook/issues/cloudflare/CF-001), [DNS-001](/runbook/issues/dns/DNS-001)    |
+| CoreDNS pod not running              | [DNS-001](/runbook/issues/dns/DNS-001)                                                 |
+| nslookup fails inside pods           | [DNS-001](/runbook/issues/dns/DNS-001), [PIHOLE-001](/runbook/issues/dns/PIHOLE-001)   |
+| Node unreachable                     | [NODE-001](/runbook/issues/node/NODE-001), [NET-001](/runbook/issues/network/NET-001)  |
+| Node has multiple IPs                | [NODE-002](/runbook/issues/node/NODE-002), [NODE-003](/runbook/issues/node/NODE-003)   |
+| Boot failure / emergency mode        | [BOOT-001](/runbook/issues/boot/BOOT-001), [EMERG-001](/runbook/issues/boot/EMERG-001) |
+| NVMe boot issues                     | [BOOT-003](/runbook/issues/boot/BOOT-003)                                              |
+| SSH permission denied                | [SSH-001](/runbook/issues/ssh/SSH-001)                                                 |
+| Root account locked                  | [SSH-003](/runbook/issues/ssh/SSH-003)                                                 |
+| Vault sealed / unavailable           | [VAULT-001](/runbook/issues/storage/VAULT-001)                                         |
+| K3s service not starting             | [K3S-001](/runbook/issues/node/K3S-001)                                                |
+| Network connectivity lost            | [NET-001](/runbook/issues/network/NET-001), [NET-002](/runbook/issues/network/NET-002) |
+| Netplan configuration issues         | [NET-003](/runbook/issues/network/NET-003)                                             |
+| MetalLB VIP not responding           | [NET-005](/runbook/issues/network/NET-005)                                             |
+| Cross-node pod communication failing | [NET-006](/runbook/issues/network/NET-006)                                             |
+| DNS fails inside pods (Tailscale)    | [NET-006](/runbook/issues/network/NET-006)                                             |
+| GitHub workflow fails                | [CICD-001](/runbook/issues/cicd/CICD-001)                                              |
+| Reusable workflow not found          | [CICD-001](/runbook/issues/cicd/CICD-001)                                              |
+| Docker build fails in CI             | [CICD-001](/runbook/issues/cicd/CICD-001)                                              |
+| OpenClaw Web UI 1008 / token        | [OPENCLAW-001](/runbook/issues/openclaw/OPENCLAW-001)                                 |
+| OpenClaw config / doctor / EROFS     | [OPENCLAW-001](/runbook/issues/openclaw/OPENCLAW-001)                                 |
 
 ### By Category
 
 #### DNS Issues
+
 - [DNS-001: CoreDNS Troubleshooting](/runbook/issues/dns/DNS-001)
 - [PIHOLE-001: Pi-hole DNS Issues](/runbook/issues/dns/PIHOLE-001)
 
 #### Cloudflare Issues
+
 - [CF-001: Cloudflare Tunnel Troubleshooting](/runbook/issues/cloudflare/CF-001)
 
 #### Node Issues
+
 - [NODE-001: General Node Troubleshooting](/runbook/issues/node/NODE-001)
 - [NODE-002: Recurring Node Issues](/runbook/issues/node/NODE-002)
 - [NODE-003: Node Root Cause Analysis](/runbook/issues/node/NODE-003)
@@ -51,18 +56,21 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 - [K3S-001: K3s Service Troubleshooting](/runbook/issues/node/K3S-001)
 
 #### Boot Issues
+
 - [BOOT-001: Boot Fix](/runbook/issues/boot/BOOT-001)
 - [BOOT-002: Boot Reliability Fix](/runbook/issues/boot/BOOT-002)
 - [BOOT-003: NVMe Boot Troubleshooting](/runbook/issues/boot/BOOT-003)
 - [BOOT-004: Initramfs Fix](/runbook/issues/boot/BOOT-004)
 
 #### Emergency Recovery
+
 - [EMERG-001: Emergency Mode Recovery](/runbook/issues/boot/EMERG-001)
 - [EMERG-002: Emergency Mode No Keyboard](/runbook/issues/boot/EMERG-002)
 - [EMERG-003: Recovery from SD Card](/runbook/issues/boot/EMERG-003)
 - [EMERG-004: SD Card Recovery](/runbook/issues/boot/EMERG-004)
 
 #### Network Issues
+
 - [NET-001: Network Connectivity Recovery](/runbook/issues/network/NET-001)
 - [NET-002: Node 1 Network Recovery](/runbook/issues/network/NET-002)
 - [NET-003: Post-Netplan Fix](/runbook/issues/network/NET-003)
@@ -71,15 +79,22 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 - [NET-006: Tailscale/k3s Routing Conflict](/runbook/issues/network/NET-006)
 
 #### Storage Issues
+
 - [VAULT-001: Vault Recovery](/runbook/issues/storage/VAULT-001)
 
 #### SSH Issues
+
 - [SSH-001: SSH Permission Denied](/runbook/issues/ssh/SSH-001)
 - [SSH-002: SSH Recovery](/runbook/issues/ssh/SSH-002)
 - [SSH-003: Locked Root Recovery](/runbook/issues/ssh/SSH-003)
 
 #### CI/CD Issues
+
 - [CICD-001: Reusable Workflow Issues](/runbook/issues/cicd/CICD-001)
+
+#### OpenClaw Issues
+
+- [OPENCLAW-001: Gateway and Config Issues](/runbook/issues/openclaw/OPENCLAW-001)
 
 ## Adding New Issues
 

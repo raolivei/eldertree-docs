@@ -44,6 +44,7 @@ cat .github/workflows/build-and-push.yml | grep "uses:"
 ```
 
 Verify the reference format:
+
 ```yaml
 uses: raolivei/github-workflows/.github/workflows/docker-build.yml@main
 ```
@@ -63,6 +64,7 @@ gh secret list -R raolivei/<repo-name>
 ```
 
 Required secrets vary by workflow:
+
 - `docker-build.yml`: Uses `GITHUB_TOKEN` (automatic) or `REGISTRY_TOKEN`
 - `terraform-*.yml`: `TF_API_TOKEN`, cloud provider credentials
 - `gitops-image-update.yml`: `GITHUB_TOKEN` with write permissions
@@ -72,6 +74,7 @@ Required secrets vary by workflow:
 ### Workflow Not Found
 
 1. Verify the branch/tag exists:
+
    ```bash
    cd ~/WORKSPACE/raolivei/github-workflows
    git fetch --all
@@ -80,6 +83,7 @@ Required secrets vary by workflow:
    ```
 
 2. If using a feature branch, ensure it's pushed:
+
    ```bash
    git push -u origin <branch-name>
    ```
@@ -92,6 +96,7 @@ Required secrets vary by workflow:
 ### Authentication Errors
 
 1. For GHCR, ensure `REGISTRY_TOKEN` is passed:
+
    ```yaml
    secrets:
      REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -117,16 +122,16 @@ gh run watch -R raolivei/<repo-name>
 
 ## Available Workflows
 
-| Workflow | Purpose |
-|----------|---------|
-| `docker-build.yml` | Build & push arm64 Docker images |
-| `docker-matrix.yml` | Build multiple services in parallel |
-| `python-ci.yml` | Python linting and testing |
-| `node-ci.yml` | Node.js linting and testing |
-| `static-site-pages.yml` | Deploy to GitHub Pages |
-| `terraform-pr.yml` | Terraform plan on PR |
-| `terraform-apply.yml` | Terraform apply (manual) |
-| `gitops-image-update.yml` | Update K8s manifests |
+| Workflow                  | Purpose                             |
+| ------------------------- | ----------------------------------- |
+| `docker-build.yml`        | Build & push arm64 Docker images    |
+| `docker-matrix.yml`       | Build multiple services in parallel |
+| `python-ci.yml`           | Python linting and testing          |
+| `node-ci.yml`             | Node.js linting and testing         |
+| `static-site-pages.yml`   | Deploy to GitHub Pages              |
+| `terraform-pr.yml`        | Terraform plan on PR                |
+| `terraform-apply.yml`     | Terraform apply (manual)            |
+| `gitops-image-update.yml` | Update K8s manifests                |
 
 ## Related Issues
 

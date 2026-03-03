@@ -184,6 +184,16 @@ export function sidebar() {
           },
         ],
       },
+      {
+        text: "OpenClaw Issues",
+        collapsed: false,
+        items: [
+          {
+            text: "OPENCLAW-001: Gateway and Config",
+            link: "/runbook/issues/openclaw/OPENCLAW-001",
+          },
+        ],
+      },
     ],
   };
 }
