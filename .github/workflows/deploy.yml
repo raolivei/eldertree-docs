@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  # docker-build reusable workflow may request contents: write (git tag job); caller must allow it.
+  contents: write
   pages: write
   id-token: write
   packages: write
