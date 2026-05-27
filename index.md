@@ -6,6 +6,9 @@ hero:
   tagline: Searchable incident management for the eldertree Kubernetes cluster
   actions:
     - theme: brand
+      text: Project overview
+      link: /project
+    - theme: alt
       text: View Runbook
       link: /runbook/
     - theme: alt
@@ -29,6 +32,7 @@ This documentation site serves as the incident runbook for the **eldertree** Kub
 
 ## Quick Links
 
+- [**Project overview**](/project) - Cluster map, Grafana links, repos, and hardware
 - [**Runbook Overview**](/runbook/) - Browse all known issues by category
 - [**Agent Workflow**](/runbook/workflow) - Instructions for AI agents on how to use this runbook
 - [**pi-fleet Repository**](https://github.com/raolivei/pi-fleet) - Infrastructure code and setup guides

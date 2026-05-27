@@ -5,6 +5,10 @@ export function sidebar() {
         text: "Introduction",
         link: "/",
       },
+      {
+        text: "Project overview",
+        link: "/project",
+      },
     ],
     "/runbook/": [
       {
