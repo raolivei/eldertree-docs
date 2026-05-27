@@ -96,6 +96,10 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 
 - [OPENCLAW-001: Gateway and Config Issues](/runbook/issues/openclaw/OPENCLAW-001)
 
+#### Physical hardware
+
+- [Chassis assembly (Pi tower)](/runbook/hardware/chassis) — EcoFlow + PoE switch + blade carriers; CAD in [eldertree-chassis](https://github.com/raolivei/eldertree-chassis)
+
 ## Adding New Issues
 
 When documenting a new issue, use this template:
