@@ -29,6 +29,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
+      { text: "Project", link: "/project" },
       { text: "Runbook", link: "/runbook/" },
       { text: "Infrastructure", link: "https://github.com/raolivei/pi-fleet" },
     ],
