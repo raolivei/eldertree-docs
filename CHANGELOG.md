@@ -22,6 +22,7 @@ After **1.0.0** release:
 
 ### Added
 
+- **Node Scheduling Tiers** documentation — comprehensive guide for automated node-1 workload deprioritization, ConfigMap-based configuration, Flux/Ansible/Helm integration, verification commands, and policy change workflow.
 - Initial VitePress documentation site structure
 - Runbook system with searchable issue files
 - Migration of troubleshooting docs from pi-fleet

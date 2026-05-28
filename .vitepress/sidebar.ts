@@ -20,6 +20,20 @@ export function sidebar() {
         link: "/runbook/workflow",
       },
       {
+        text: "Node Scheduling Tiers",
+        link: "/runbook/node-scheduling",
+      },
+      {
+        text: "Hardware",
+        collapsed: false,
+        items: [
+          {
+            text: "ElderTree Chassis",
+            link: "/runbook/hardware/chassis",
+          },
+        ],
+      },
+      {
         text: "DNS Issues",
         collapsed: false,
         items: [
