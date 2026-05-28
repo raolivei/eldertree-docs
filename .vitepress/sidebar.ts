@@ -9,6 +9,16 @@ export function sidebar() {
         text: "Project overview",
         link: "/project",
       },
+      {
+        text: "Develop",
+        collapsed: false,
+        items: [
+          {
+            text: "Ollie workspace setup",
+            link: "/guides/ollie-workspace-setup",
+          },
+        ],
+      },
     ],
     "/runbook/": [
       {

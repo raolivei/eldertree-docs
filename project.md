@@ -43,6 +43,8 @@ export KUBECONFIG=~/.kube/config-eldertree
 | [pi-fleet](https://github.com/raolivei/pi-fleet) | Infrastructure as Code — Ansible, Flux, Helm, Terraform, monitoring stack |
 | [eldertree-chassis](https://github.com/raolivei/eldertree-chassis) | Mechanical CAD, BOM, assembly guide, hardware design |
 | [eldertree-docs](https://github.com/raolivei/eldertree-docs) | This documentation site — architecture, operations, runbook, learning resources |
+| [ollie](https://github.com/raolivei/ollie) | Workspace assistant — RAG over org docs; shared memory for Cursor + Claude |
+| [workspace-config](https://github.com/raolivei/workspace-config) | Ports, conventions, [Ollie workstation setup](https://github.com/raolivei/workspace-config/blob/main/docs/OLLIE_WORKSPACE_SETUP.md) |
 | [pi-fleet-blog](https://github.com/raolivei/pi-fleet-blog) | Build diary, technical blog, lessons learned |
 
 **Cross-reference:** Canonical ops map in pi-fleet: [ELDERTREE.md](https://github.com/raolivei/pi-fleet/blob/main/docs/ELDERTREE.md).
@@ -105,8 +107,9 @@ flowchart LR
 **Applications:**
 - [Canopy](https://github.com/raolivei/canopy) — Personal finance dashboard (CAD/USD, portfolio tracking)
 - [SwimTO](https://github.com/raolivei/swimTO) — Toronto community pool schedule aggregator (MIT licensed)
-- [Visage](https://github.com/raolivei/visage) — Self-hosted AI headshots (SDXL + LoRA)
 - [OpenClaw/Elder](https://github.com/raolivei/elder) — Cluster management AI agent
+
+**Decommissioned:** [Visage](https://github.com/raolivei/visage) *(archived 2026-04)* — was self-hosted AI headshots; see `workspace-config/docs/PROJECT_DECOMMISSIONING.md`.
 
 **Platform Services:**
 - HashiCorp Vault (secrets management)

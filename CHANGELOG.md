@@ -20,6 +20,9 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Added
+- [Ollie workspace setup](/guides/ollie-workspace-setup) — Cursor + Claude Code shared memory (links to workspace-config canonical guide)
+
 ### Changed
 
 - **Documentation philosophy** — reframed eldertree-docs as comprehensive knowledge base (learn, operate, troubleshoot) rather than runbook-only. Updated README, homepage, and project overview to reflect broader scope: architecture documentation, learning resources, operational guides, and troubleshooting runbook.

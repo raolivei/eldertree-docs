@@ -38,6 +38,9 @@ features:
 ### 🏗️ [Project Overview](/project)
 Cluster map, live Grafana dashboards, hardware specs, repositories, and network topology.
 
+### 💻 Develop on your Mac
+- [Ollie workspace setup](/guides/ollie-workspace-setup) — shared Cursor + Claude Code memories, session handoff
+
 ### 🔧 Operations & Architecture
 - [Node Scheduling Tiers](/runbook/node-scheduling) — automated workload placement policy
 - [Hardware & Chassis](/runbook/hardware/chassis) — physical setup and assembly
