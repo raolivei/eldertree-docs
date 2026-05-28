@@ -20,6 +20,26 @@ cd ~/WORKSPACE/raolivei/workspace-config
 
 Then open **`RAOLIVEI.code-workspace`** (not the `ollie/` folder alone).
 
+### Expected output (success)
+
+```text
+Already linked: .../.claude/projects/-Users-roliveira-WORKSPACE-raolivei/memory -> .../raolivei/ollie/memory
+Ollie workspace ready:
+  .../raolivei/AGENTS.md
+  .../raolivei/.cursor/rules/ollie-persona.mdc
+  ollie/memory/ (shared with Claude Code when symlinked)
+```
+
+`Already linked` on repeat runs is normal. Full details: [canonical guide — expected output](https://github.com/raolivei/workspace-config/blob/main/docs/OLLIE_WORKSPACE_SETUP.md#expected-output-success).
+
+### Verify
+
+```bash
+readlink ~/.claude/projects/-Users-roliveira-WORKSPACE-raolivei/memory
+```
+
+In a new Cursor chat: *"Who are you? Read HANDOFF."* → should answer as **Ollie**.
+
 ## What you get
 
 | Piece | Location |
