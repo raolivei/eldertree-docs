@@ -1,13 +1,22 @@
 ---
 title: ElderTree Project
-description: Unified view of the eldertree cluster — hardware, software, and live ops
+description: Comprehensive overview of the ElderTree cluster — hardware, software, architecture, and live operations
 ---
 
 ![eldertree-chassis — portable Pi 5 cluster tower](/banner.png)
 
-# ElderTree project
+# ElderTree Project
 
-**Eldertree** is a 3-node HA K3s cluster on Raspberry Pi 5 hardware in a portable open-frame tower ([eldertree-chassis](https://github.com/raolivei/eldertree-chassis) CAD, private repo).
+**ElderTree** is a production-grade, self-hosted Kubernetes platform built on Raspberry Pi 5 hardware. It runs personal applications, experimental AI workloads, and serves as a learning environment for modern infrastructure patterns.
+
+**Architecture:** 3-node HA K3s cluster in a portable open-frame tower ([eldertree-chassis](https://github.com/raolivei/eldertree-chassis) CAD, private repo).
+
+## Philosophy
+
+- **Self-hosted first** — own your data, infrastructure, and learning
+- **GitOps native** — all state in Git, declarative configuration
+- **Observability-driven** — Prometheus/Grafana before guessing
+- **Production practices on Pi** — HA, monitoring, secrets management, disaster recovery
 
 ## Live status
 
@@ -31,11 +40,12 @@ export KUBECONFIG=~/.kube/config-eldertree
 
 | Repository | Purpose |
 |------------|---------|
-| [pi-fleet](https://github.com/raolivei/pi-fleet) | Cluster IaC, Ansible, Flux, monitoring |
-| [eldertree-chassis](https://github.com/raolivei/eldertree-chassis) | Mechanical CAD, BOM, assembly |
-| [eldertree-docs](https://github.com/raolivei/eldertree-docs) | This site (runbook) |
+| [pi-fleet](https://github.com/raolivei/pi-fleet) | Infrastructure as Code — Ansible, Flux, Helm, Terraform, monitoring stack |
+| [eldertree-chassis](https://github.com/raolivei/eldertree-chassis) | Mechanical CAD, BOM, assembly guide, hardware design |
+| [eldertree-docs](https://github.com/raolivei/eldertree-docs) | This documentation site — architecture, operations, runbook, learning resources |
+| [pi-fleet-blog](https://github.com/raolivei/pi-fleet-blog) | Build diary, technical blog, lessons learned |
 
-Canonical ops map in pi-fleet: [ELDERTREE.md](https://github.com/raolivei/pi-fleet/blob/main/docs/ELDERTREE.md).
+**Cross-reference:** Canonical ops map in pi-fleet: [ELDERTREE.md](https://github.com/raolivei/pi-fleet/blob/main/docs/ELDERTREE.md).
 
 ## Physical stack
 
@@ -80,6 +90,28 @@ flowchart LR
   DOC -.->|runbook| K3s
 ```
 
-## Incident response
+## Using This Documentation
 
-When something breaks, use the [runbook](/runbook/) (search with `/` or `Ctrl+K`).
+**Learning:** Explore architecture pages, design decisions, and reference documentation to understand how ElderTree works.
+
+**Operations:** Follow deployment guides, configuration references, and management procedures for day-to-day cluster operation.
+
+**Troubleshooting:** When something breaks, search the [runbook](/runbook/) using `/` or `Ctrl+K` to find matching issues and resolution steps.
+
+**Development:** See [pi-fleet](https://github.com/raolivei/pi-fleet) for contributing to infrastructure code, or [eldertree-docs](https://github.com/raolivei/eldertree-docs) to improve documentation.
+
+## What ElderTree Runs
+
+**Applications:**
+- [Canopy](https://github.com/raolivei/canopy) — Personal finance dashboard (CAD/USD, portfolio tracking)
+- [SwimTO](https://github.com/raolivei/swimTO) — Toronto community pool schedule aggregator (MIT licensed)
+- [Visage](https://github.com/raolivei/visage) — Self-hosted AI headshots (SDXL + LoRA)
+- [OpenClaw/Elder](https://github.com/raolivei/elder) — Cluster management AI agent
+
+**Platform Services:**
+- HashiCorp Vault (secrets management)
+- Prometheus + Grafana + Loki (observability)
+- Cert-Manager (TLS certificates)
+- Cloudflare Tunnel (external access)
+- Pi-hole (DNS filtering)
+- Longhorn (distributed storage)

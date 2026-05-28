@@ -20,6 +20,10 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Changed
+
+- **Documentation philosophy** — reframed eldertree-docs as comprehensive knowledge base (learn, operate, troubleshoot) rather than runbook-only. Updated README, homepage, and project overview to reflect broader scope: architecture documentation, learning resources, operational guides, and troubleshooting runbook.
+
 ### Added
 
 - **Node Scheduling Tiers** documentation — comprehensive guide for automated node-1 workload deprioritization, ConfigMap-based configuration, Flux/Ansible/Helm integration, verification commands, and policy change workflow.

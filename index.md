@@ -1,65 +1,91 @@
 ---
 layout: home
 hero:
-  name: Eldertree Docs
-  text: Cluster Runbook & Documentation
-  tagline: Searchable incident management for the eldertree Kubernetes cluster
+  name: ElderTree Docs
+  text: Learn • Operate • Troubleshoot
+  tagline: Comprehensive documentation for the ElderTree Kubernetes cluster
   actions:
     - theme: brand
-      text: Project overview
+      text: Project Overview
       link: /project
     - theme: alt
-      text: View Runbook
+      text: Runbook
       link: /runbook/
     - theme: alt
-      text: Agent Workflow
-      link: /runbook/workflow
+      text: Node Scheduling
+      link: /runbook/node-scheduling
 features:
+  - icon: 📚
+    title: Learning & Architecture
+    details: Understand how ElderTree works — cluster design, network topology, storage strategy, and infrastructure patterns
+  - icon: 🔧
+    title: Operations
+    details: Day-to-day management, GitOps workflows, monitoring, deployments, and configuration management
   - icon: 🔍
-    title: Searchable Issues
-    details: Full-text search across all known issues, error messages, and symptoms
+    title: Troubleshooting
+    details: Searchable runbook with known issues, error messages, resolution steps, and root cause analysis
   - icon: 🤖
     title: Agent-Compatible
-    details: Structured format designed for AI agents to quickly find and resolve issues
-  - icon: 📚
-    title: Documented Solutions
-    details: Step-by-step resolution guides with verification commands
+    details: Structured documentation designed for both humans and AI agents to quickly navigate and resolve issues
 ---
 
-# Welcome to Eldertree Docs
+# Welcome to ElderTree Documentation
 
-This documentation site serves as the incident runbook for the **eldertree** Kubernetes cluster - a k3s cluster running on Raspberry Pi hardware.
+**ElderTree** is a 3-node HA K3s cluster running on Raspberry Pi 5 hardware. This is the comprehensive knowledge base — not just a runbook, but complete documentation for learning, operating, and troubleshooting the platform.
 
-## Quick Links
+## What's Here
 
-- [**Project overview**](/project) - Cluster map, Grafana links, repos, and hardware
-- [**Runbook Overview**](/runbook/) - Browse all known issues by category
-- [**Agent Workflow**](/runbook/workflow) - Instructions for AI agents on how to use this runbook
-- [**pi-fleet Repository**](https://github.com/raolivei/pi-fleet) - Infrastructure code and setup guides
+### 🏗️ [Project Overview](/project)
+Cluster map, live Grafana dashboards, hardware specs, repositories, and network topology.
 
-## How to Use
+### 🔧 Operations & Architecture
+- [Node Scheduling Tiers](/runbook/node-scheduling) — automated workload placement policy
+- [Hardware & Chassis](/runbook/hardware/chassis) — physical setup and assembly
+- GitOps workflows (Flux, Ansible, Terraform)
+- Secrets management (Vault)
+- Observability stack (Prometheus, Grafana, Loki)
 
-### For Humans
+### 🔍 [Incident Runbook](/runbook/)
+Searchable troubleshooting guides organized by category:
 
-Use the search bar (press `/` or `Ctrl+K`) to search for error messages or symptoms you're experiencing.
+| Category | Coverage |
+|----------|----------|
+| **DNS** | CoreDNS, Pi-hole resolution, timeout issues |
+| **Cloudflare** | Tunnel connectivity, origin certificates, SSL |
+| **HA & Failover** | Node failure recovery, Longhorn, PDBs |
+| **Node** | Node health, k3s service issues, cluster membership |
+| **Boot** | NVMe boot, initramfs, emergency mode recovery |
+| **Network** | Connectivity, routing tables, dual-interface setup |
+| **Storage** | Vault recovery, Longhorn volumes |
+| **SSH** | Permission denied, locked root, key access |
+| **CI/CD** | GitHub Actions, reusable workflows |
+| **OpenClaw** | Gateway configuration, Elder integration |
 
-### For AI Agents
+## Quick Start
 
-1. Search the runbook using the error text or symptom
-2. Find matching issue files
-3. Follow the resolution steps
-4. Verify the fix using the provided commands
+**Search** — Press `/` or `Ctrl+K` to search for error messages, symptoms, or topics.
 
-## Issue Categories
+**Live Dashboards** — Access [Grafana](https://grafana.eldertree.local) for real-time cluster monitoring (requires home LAN or Tailscale).
 
-| Category | Description |
-|----------|-------------|
-| DNS | CoreDNS, Pi-hole, and DNS resolution issues |
-| Cloudflare | Tunnel, DNS, and external access issues |
-| Node | Node health, dual IP, and cluster membership |
-| Boot | Boot failures, NVMe, and system startup |
-| Network | Network connectivity and recovery |
-| Storage | Vault, Longhorn, and persistent storage |
-| SSH | SSH access and authentication |
+**Infrastructure Code** — See [pi-fleet](https://github.com/raolivei/pi-fleet) for Ansible, Flux, Helm charts, and Terraform.
 
+## For AI Agents
+
+Structured workflow for incident resolution: [Agent Workflow](/runbook/workflow)
+
+1. Search for error text or symptom
+2. Locate matching issue file
+3. Execute resolution steps
+4. Verify fix with provided commands
+
+## About ElderTree
+
+- **Hardware:** 3× Raspberry Pi 5 (8GB, NVMe boot, PoE+)
+- **Network:** Dual-interface (10.0.0.0/24 cluster backbone, 192.168.2.0/24 WiFi management)
+- **HA Setup:** 3-node control plane, kube-vip VIP, embedded etcd
+- **Storage:** NVMe local, Longhorn distributed block storage, Vault for secrets
+- **Monitoring:** Prometheus, Grafana, Loki, Node Exporter, cAdvisor
+- **GitOps:** FluxCD syncs from [pi-fleet](https://github.com/raolivei/pi-fleet)
+
+**Explore:** [Full project overview →](/project)
 
