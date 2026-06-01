@@ -20,6 +20,10 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Fixed
+
+- **GitHub Pages deploy** — restore `static-site-pages.yml` caller in `github-workflows`; per-job permissions in `deploy.yml` so Pages publish works again (HA-001 and other runbooks were 404 on docs.eldertree.xyz).
+
 ### Added
 
 - Initial VitePress documentation site structure
