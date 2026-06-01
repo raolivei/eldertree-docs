@@ -196,6 +196,38 @@ export function sidebar() {
             text: "OPENCLAW-001: Gateway and Config",
             link: "/runbook/issues/openclaw/OPENCLAW-001",
           },
+          {
+            text: "OPENCLAW-002: Token Auth / WebSocket 1008",
+            link: "/runbook/issues/openclaw/OPENCLAW-002",
+          },
+          {
+            text: "OPENCLAW-003: Context Overflow / 402 / TPM",
+            link: "/runbook/issues/openclaw/OPENCLAW-003",
+          },
+          {
+            text: "OPENCLAW-004: Telegram Not Replying",
+            link: "/runbook/issues/openclaw/OPENCLAW-004",
+          },
+          {
+            text: "OPENCLAW-005: Config EBUSY / exec-approvals",
+            link: "/runbook/issues/openclaw/OPENCLAW-005",
+          },
+          {
+            text: "OPENCLAW-006: Tool Schema (boolean vs string)",
+            link: "/runbook/issues/openclaw/OPENCLAW-006",
+          },
+          {
+            text: "OPENCLAW-007: Gmail via Elder",
+            link: "/runbook/issues/openclaw/OPENCLAW-007",
+          },
+          {
+            text: "OPENCLAW-008: Deployment Delete / Helm Drift",
+            link: "/runbook/issues/openclaw/OPENCLAW-008",
+          },
+          {
+            text: "OPENCLAW-009: OOM / Heap",
+            link: "/runbook/issues/openclaw/OPENCLAW-009",
+          },
         ],
       },
     ],

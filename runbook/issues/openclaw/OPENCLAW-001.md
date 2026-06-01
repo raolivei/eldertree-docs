@@ -38,7 +38,18 @@ symptoms:
 
 ## Resolution
 
-### 1. Trusted-proxy auth (fix 1008)
+> **Current standard (2026-04+):** Use **token auth**, not trusted-proxy. See [OPENCLAW-002](/runbook/issues/openclaw/OPENCLAW-002) for WebSocket 1008 / `trusted_proxy_untrusted_source`. The trusted-proxy steps below are **legacy**.
+
+### 1. Token auth (fix 1008 for internal clients + Web UI)
+
+In OpenClaw config (`openclaw-config-file` ConfigMap):
+
+- Set `gateway.auth.mode` to `"token"`.
+- Set `gateway.auth.token` to `"${OPENCLAW_GATEWAY_TOKEN}"`.
+- Remove Traefik `add-trusted-proxy-user` middleware from OpenClaw ingress.
+- Web UI: paste token from Vault `secret/openclaw/gateway` once.
+
+### 1b. Trusted-proxy auth (legacy — do not use on Eldertree)
 
 In OpenClaw config (`openclaw-config-file` ConfigMap):
 
@@ -46,7 +57,7 @@ In OpenClaw config (`openclaw-config-file` ConfigMap):
 - Configure `gateway.auth.trustedProxy` with `userHeader: "x-forwarded-user"` and `allowUsers: ["local"]`.
 - In Traefik IngressMiddleware, add header `X-Forwarded-User: local` for the OpenClaw route.
 
-### 2. Config schema (2026)
+**Note:** Loopback gateway clients still fail with trusted-proxy; use token auth instead.
 
 - Remove any top-level `providers` or `models.default`.
 - Use `agents.defaults.model.primary` and `agents.defaults.model.fallbacks` with `provider/model` ids.
@@ -84,10 +95,16 @@ In config, under `gateway.controlUi`:
 
 ## Verification
 
-- Web UI loads at https://openclaw.eldertree.local without entering a token.
+- Web UI loads at https://openclaw.eldertree.local (paste gateway token when prompted).
 - Pod is 1/1 Running; no restart loop.
 - Logs show gateway listening and no EROFS or config write errors.
 - Health: `curl -s https://openclaw.eldertree.local/health` returns 200.
+
+## See Also
+
+- [OPENCLAW-002](/runbook/issues/openclaw/OPENCLAW-002) — token auth vs trusted-proxy
+- [OPENCLAW-005](/runbook/issues/openclaw/OPENCLAW-005) — EBUSY / PVC config seeding
+- [OPENCLAW-009](/runbook/issues/openclaw/OPENCLAW-009) — OOM / heap
 
 ## All models failed (Google / Groq / Ollama)
 
@@ -96,6 +113,16 @@ If logs show **FailoverError** or **All models failed** for `google`, `groq`, or
 1. **Google:** "No API key found for provider google" — Ensure `GOOGLE_API_KEY` is in `openclaw-secrets` and the config has `models.providers.google.apiKey: "${GOOGLE_API_KEY}"` so the gateway uses the env var.
 2. **Groq:** "Unknown model: groq/llama-3.1-70b-versatile" — Use the current catalog id (e.g. `groq/llama-3.3-70b-versatile`). Ensure `GROQ_API_KEY` is set when using Groq.
 3. **Ollama:** "Unknown model: ollama/... Ollama requires authentication" — Set `OLLAMA_API_KEY` (e.g. to `ollama-local`) so the provider is registered; the entrypoint can default it with `export OLLAMA_API_KEY="${OLLAMA_API_KEY:-ollama-local}"`.
+
+## In-container `openclaw update` (not supported)
+
+Logs may show `update available (latest): v2026.x.x`. **`openclaw update` inside the Kubernetes pod is not supported** — the image is read-only GitOps-managed. Upgrade path:
+
+1. GitHub Action builds `ghcr.io/raolivei/openclaw` (ARM64).
+2. Flux reconciles `pi-fleet` HelmRelease / image tag.
+3. Or Elder `elder_upgrade` with approval (if configured).
+
+Do not grant shell "permissions" for in-pod self-update; fix is a new image rollout.
 
 ## Related Files
 

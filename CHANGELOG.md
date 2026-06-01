@@ -26,6 +26,7 @@ After **1.0.0** release:
 
 ### Added
 
+- **OpenClaw runbook (OPENCLAW-002–009)** — Documented Eldertree production issues: token vs trusted-proxy WebSocket 1008, context overflow / OpenRouter 402 / Groq TPM, Telegram 409 and egress, config EBUSY / PVC seeding, Groq tool schema errors, Gmail via Elder, accidental Deployment delete / Helm drift, OOM/heap. Updated OPENCLAW-001 for current token-auth standard.
 - Initial VitePress documentation site structure
 - Runbook system with searchable issue files
 - Migration of troubleshooting docs from pi-fleet

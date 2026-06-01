@@ -33,8 +33,14 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 | GitHub workflow fails                | [CICD-001](/runbook/issues/cicd/CICD-001)                                              |
 | Reusable workflow not found          | [CICD-001](/runbook/issues/cicd/CICD-001)                                              |
 | Docker build fails in CI             | [CICD-001](/runbook/issues/cicd/CICD-001)                                              |
-| OpenClaw Web UI 1008 / token        | [OPENCLAW-001](/runbook/issues/openclaw/OPENCLAW-001)                                 |
-| OpenClaw config / doctor / EROFS     | [OPENCLAW-001](/runbook/issues/openclaw/OPENCLAW-001)                                 |
+| OpenClaw Web UI 1008 / token        | [OPENCLAW-001](/runbook/issues/openclaw/OPENCLAW-001), [OPENCLAW-002](/runbook/issues/openclaw/OPENCLAW-002) |
+| OpenClaw config / doctor / EROFS     | [OPENCLAW-001](/runbook/issues/openclaw/OPENCLAW-001), [OPENCLAW-005](/runbook/issues/openclaw/OPENCLAW-005) |
+| OpenClaw context overflow / 402      | [OPENCLAW-003](/runbook/issues/openclaw/OPENCLAW-003)                                 |
+| Telegram bot not replying            | [OPENCLAW-004](/runbook/issues/openclaw/OPENCLAW-004)                                 |
+| OpenClaw tool call validation failed   | [OPENCLAW-006](/runbook/issues/openclaw/OPENCLAW-006)                                 |
+| Elder read my emails / Gmail         | [OPENCLAW-007](/runbook/issues/openclaw/OPENCLAW-007)                                 |
+| OpenClaw deployment missing          | [OPENCLAW-008](/runbook/issues/openclaw/OPENCLAW-008)                                 |
+| OpenClaw OOM / heap limit            | [OPENCLAW-009](/runbook/issues/openclaw/OPENCLAW-009)                                 |
 
 ### By Category
 
@@ -95,6 +101,14 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 #### OpenClaw Issues
 
 - [OPENCLAW-001: Gateway and Config Issues](/runbook/issues/openclaw/OPENCLAW-001)
+- [OPENCLAW-002: Gateway Auth — Token vs Trusted-Proxy](/runbook/issues/openclaw/OPENCLAW-002)
+- [OPENCLAW-003: LLM Context Overflow and Provider Limits](/runbook/issues/openclaw/OPENCLAW-003)
+- [OPENCLAW-004: Telegram Bot Not Replying](/runbook/issues/openclaw/OPENCLAW-004)
+- [OPENCLAW-005: Config EBUSY / PVC and exec-approvals](/runbook/issues/openclaw/OPENCLAW-005)
+- [OPENCLAW-006: Tool Call Schema Failures](/runbook/issues/openclaw/OPENCLAW-006)
+- [OPENCLAW-007: Gmail Read/Write via Elder](/runbook/issues/openclaw/OPENCLAW-007)
+- [OPENCLAW-008: Accidental Deployment Delete / Helm Drift](/runbook/issues/openclaw/OPENCLAW-008)
+- [OPENCLAW-009: OpenClaw OOM and Node Memory](/runbook/issues/openclaw/OPENCLAW-009)
 
 #### Physical hardware
 
