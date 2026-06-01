@@ -17,7 +17,7 @@ jobs:
       id-token: write
     uses: raolivei/github-workflows/.github/workflows/static-site-pages.yml@main
     with:
-      node-version: "20"
+      node-version: "24"
       build-command: npm run build
       output-directory: .vitepress/dist
 
