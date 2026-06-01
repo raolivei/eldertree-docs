@@ -19,14 +19,17 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:site_name", content: "Eldertree Docs" }],
     ["meta", { property: "og:title", content: "Eldertree Docs - Cluster Runbook" }],
     ["meta", { property: "og:description", content: "Documentation and incident runbook for the eldertree Kubernetes cluster" }],
+    ["meta", { property: "og:image", content: "https://docs.eldertree.xyz/logo.png" }],
   ],
 
   themeConfig: {
+    logo: "/logo.png",
+
     nav: [
       { text: "Home", link: "/" },
       { text: "Project", link: "/project" },

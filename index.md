@@ -4,6 +4,11 @@ hero:
   name: Eldertree Docs
   text: Cluster Runbook & Documentation
   tagline: Searchable incident management for the eldertree Kubernetes cluster
+  image:
+    src: /logo.png
+    alt: Eldertree cluster icon
+    width: 200
+    height: 200
   actions:
     - theme: brand
       text: Project overview
@@ -25,6 +30,8 @@ features:
     title: Documented Solutions
     details: Step-by-step resolution guides with verification commands
 ---
+
+<ClusterGlance />
 
 # Welcome to Eldertree Docs
 

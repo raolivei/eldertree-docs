@@ -20,6 +20,18 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Added
+
+- **Cluster at a glance** on the home page — same widget as [pi-fleet-blog](https://blog.eldertree.xyz/) with indigo styling; live node status via Elder public API or [`public/cluster-status.json`](public/cluster-status.json).
+- **Eldertree logo** — icon-only mark in VitePress indigo (`#a8b1ff` / `#5c73e7` / `#3e63dd`); nav, favicon, and home hero. Source: `assets/logo-source.png`; regenerate with `python3 scripts/recolor-logo.py` (requires Pillow).
+- **`scripts/sync-cluster-status.sh`** — optional kubectl refresh of `public/cluster-status.json` (deploy workflow runs it; skips when cluster unreachable in GHA).
+
+### Changed
+
+- **Deploy workflow:** pre-build sync step for cluster-status (falls back to committed JSON in CI).
+- **`.npmrc`** — pin public npm registry (avoids corporate CodeArtifact E401 on personal machines).
+- **Home hero logo** — 512×512 icon crop (wordmark excluded), softer glow, `overflow: visible` so the mark is not clipped.
+
 ### Fixed
 
 - **GitHub Pages deploy** — restore `static-site-pages.yml` caller in `github-workflows`; per-job permissions in `deploy.yml` so Pages publish works again (HA-001 and other runbooks were 404 on docs.eldertree.xyz).
