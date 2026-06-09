@@ -16,7 +16,7 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 | HTTP 530 from Cloudflare             | [CF-001](/runbook/issues/cloudflare/CF-001)                                            |
 | `dial udp 10.43.0.10:53 i/o timeout` | [CF-001](/runbook/issues/cloudflare/CF-001), [DNS-001](/runbook/issues/dns/DNS-001)    |
 | CoreDNS pod not running              | [DNS-001](/runbook/issues/dns/DNS-001)                                                 |
-| nslookup fails inside pods           | [DNS-001](/runbook/issues/dns/DNS-001), [PIHOLE-001](/runbook/issues/dns/PIHOLE-001)   |
+| nslookup fails inside pods           | [DNS-001](/runbook/issues/dns/DNS-001), [BIND9-001](/runbook/issues/dns/BIND9-001)   |
 | Node unreachable                     | [NODE-001](/runbook/issues/node/NODE-001), [NET-001](/runbook/issues/network/NET-001)  |
 | Node has multiple IPs                | [NODE-002](/runbook/issues/node/NODE-002), [NODE-003](/runbook/issues/node/NODE-003)   |
 | Boot failure / emergency mode        | [BOOT-001](/runbook/issues/boot/BOOT-001), [EMERG-001](/runbook/issues/boot/EMERG-001) |
@@ -47,7 +47,7 @@ This runbook contains documented solutions for known issues in the eldertree Kub
 #### DNS Issues
 
 - [DNS-001: CoreDNS Troubleshooting](/runbook/issues/dns/DNS-001)
-- [PIHOLE-001: Pi-hole DNS Issues](/runbook/issues/dns/PIHOLE-001)
+- [BIND9-001: BIND9 LAN DNS](/runbook/issues/dns/BIND9-001)
 
 #### Cloudflare Issues
 

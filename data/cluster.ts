@@ -58,6 +58,6 @@ export const cluster = {
   vips: [
     { label: "API", ip: "192.168.2.100", purpose: "kube-vip HA" },
     { label: "Ingress", ip: "192.168.2.200", purpose: "Traefik *.eldertree.local" },
-    { label: "DNS", ip: "192.168.2.201", purpose: "Pi-hole LB" },
+    { label: "DNS", ip: "192.168.2.201", purpose: "BIND9 LB" },
   ] satisfies ClusterVip[],
 } as const;
