@@ -9,6 +9,10 @@ export function sidebar() {
         text: "Project overview",
         link: "/project",
       },
+      {
+        text: "Cluster status",
+        link: "/cluster-status",
+      },
     ],
     "/runbook/": [
       {
@@ -28,7 +32,11 @@ export function sidebar() {
             link: "/runbook/issues/dns/DNS-001",
           },
           {
-            text: "PIHOLE-001: Pi-hole DNS",
+            text: "BIND9-001: LAN DNS",
+            link: "/runbook/issues/dns/BIND9-001",
+          },
+          {
+            text: "PIHOLE-001: Pi-hole (archived)",
             link: "/runbook/issues/dns/PIHOLE-001",
           },
         ],

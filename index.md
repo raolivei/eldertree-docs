@@ -7,8 +7,8 @@ hero:
   image:
     src: /logo.png
     alt: Eldertree cluster icon
-    width: 200
-    height: 200
+    width: 280
+    height: 280
   actions:
     - theme: brand
       text: Project overview
@@ -39,6 +39,7 @@ This documentation site serves as the incident runbook for the **eldertree** Kub
 
 ## Quick Links
 
+- [**Cluster status**](/cluster-status) - How the home-page glance widget gets live node badges
 - [**Project overview**](/project) - Cluster map, Grafana links, repos, and hardware
 - [**Runbook Overview**](/runbook/) - Browse all known issues by category
 - [**Agent Workflow**](/runbook/workflow) - Instructions for AI agents on how to use this runbook
@@ -61,7 +62,7 @@ Use the search bar (press `/` or `Ctrl+K`) to search for error messages or sympt
 
 | Category | Description |
 |----------|-------------|
-| DNS | CoreDNS, Pi-hole, and DNS resolution issues |
+| DNS | CoreDNS, BIND9, and DNS resolution issues |
 | Cloudflare | Tunnel, DNS, and external access issues |
 | Node | Node health, dual IP, and cluster membership |
 | Boot | Boot failures, NVMe, and system startup |

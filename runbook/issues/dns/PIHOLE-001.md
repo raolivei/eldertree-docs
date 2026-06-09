@@ -10,6 +10,8 @@ symptoms:
 
 # PIHOLE-001: Pi-hole DNS Troubleshooting Guide
 
+> **ARCHIVED (2026-06):** Pi-hole removed from Eldertree. Use **[BIND9-001](/runbook/issues/dns/BIND9-001)** — VIP `192.168.2.201` unchanged.
+
 ## Error Messages (Searchable)
 
 _Add exact error messages from this document here for searchability_

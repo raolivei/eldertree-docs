@@ -20,6 +20,11 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Changed
+
+- **Cluster at a glance:** link to Eldertree Control Center (`control.eldertree.local`, LAN/Tailscale) in the ops links row.
+- **Home hero logo** — larger mark (280px) and vertical alignment with the headline on wide layouts.
+
 ### Added
 
 - **Cluster at a glance** on the home page — same widget as [pi-fleet-blog](https://blog.eldertree.xyz/) with indigo styling; live node status via Elder public API or [`public/cluster-status.json`](public/cluster-status.json).
@@ -28,6 +33,7 @@ After **1.0.0** release:
 
 ### Changed
 
+- **Docs:** [`cluster-status.md`](cluster-status.md) — home-page glance widget, sync script, links to Elder API and blog ops doc.
 - **Deploy workflow:** pre-build sync step for cluster-status (falls back to committed JSON in CI).
 - **`.npmrc`** — pin public npm registry (avoids corporate CodeArtifact E401 on personal machines).
 - **Home hero logo** — 512×512 icon crop (wordmark excluded), softer glow, `overflow: visible` so the mark is not clipped.
