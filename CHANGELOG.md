@@ -20,6 +20,10 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Fixed
+
+- Keep the homepage hero logo above the heading without overlap on phone and tablet widths; preserve the desktop layout.
+
 ### Changed
 
 - **Cluster at a glance:** link to Eldertree Control Center (`control.eldertree.local`, LAN/Tailscale) in the ops links row.
