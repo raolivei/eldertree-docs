@@ -31,6 +31,42 @@
   filter: drop-shadow(0 8px 28px rgba(168, 177, 255, 0.22));
 }
 
+/* Keep the logo in its own row below the theme's desktop breakpoint. */
+@media (max-width: 959px) {
+  .VPHomeHero.has-image .image {
+    margin: 0 0 24px;
+  }
+
+  .VPHomeHero.has-image .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .VPHomeHero.has-image .image-src {
+    max-width: 200px;
+    max-height: 200px;
+    position: static;
+    transform: none;
+  }
+}
+
+/* Leave room for the heading just above the desktop breakpoint. */
+@media (min-width: 960px) and (max-width: 1199px) {
+  .VPHomeHero.has-image .image-container {
+    transform: none;
+  }
+
+  .VPHomeHero.has-image .image-src {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
 /* Cluster at a glance (matches blog layout; indigo via --vp-c-brand-*) */
 .docs-glance,
 .vp-doc .docs-glance {
