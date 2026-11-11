@@ -7,18 +7,17 @@ description: Unified view of the eldertree cluster — hardware, software, and l
 
 # ElderTree project
 
-**Eldertree** is a 3-node HA K3s cluster on Raspberry Pi 5 hardware in a portable open-frame tower ([eldertree-chassis](https://github.com/raolivei/eldertree-chassis) CAD, private repo).
+**Eldertree** is a 3-node HA K3s cluster on Raspberry Pi 5 hardware in a portable open-frame tower (with a separate mechanical CAD project).
 
 ## Live status
 
-Open these while on the home LAN (or Tailscale):
+Public entry points for operations (Grafana requires sign-in):
 
 | View | Link |
 |------|------|
-| **Ops home** | [Grafana — Eldertree Ops Home](https://grafana.eldertree.local/d/eldertree-ops-home) |
-| **Cluster** | [Grafana — Cluster overview](https://grafana.eldertree.local/d/eldertree-cluster) |
-| **Hardware** | [Grafana — Pi health](https://grafana.eldertree.local/d/hardware-health) |
-| **Command center** | [Grafana — Command center](https://grafana.eldertree.local/d/eldertree-command-center) |
+| **Control Center** | [Cluster status and topology](https://control.eldertree.xyz/) |
+| **Metrics** | [Grafana](https://grafana.eldertree.xyz/) |
+| **Build diary** | [Eldertree blog](https://blog.eldertree.xyz/) |
 
 From a pi-fleet checkout:
 
@@ -32,7 +31,7 @@ export KUBECONFIG=~/.kube/config-eldertree
 | Repository | Purpose |
 |------------|---------|
 | [pi-fleet](https://github.com/raolivei/pi-fleet) | Cluster IaC, Ansible, Flux, monitoring |
-| [eldertree-chassis](https://github.com/raolivei/eldertree-chassis) | Mechanical CAD, BOM, assembly |
+| [Chassis runbook](/runbook/hardware/chassis) | Assembly and hardware reference |
 | [eldertree-docs](https://github.com/raolivei/eldertree-docs) | This site (runbook) |
 
 Canonical ops map in pi-fleet: [ELDERTREE.md](https://github.com/raolivei/pi-fleet/blob/main/docs/ELDERTREE.md).

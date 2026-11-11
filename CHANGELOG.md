@@ -22,6 +22,8 @@ After **1.0.0** release:
 
 ### Fixed
 
+- Use public Grafana and Control Center entry points in homepage and project navigation; stop probing a private LAN hostname for public node status.
+
 - Keep the homepage hero logo above the heading without overlap on phone and tablet widths; preserve the desktop layout.
 
 ### Changed
