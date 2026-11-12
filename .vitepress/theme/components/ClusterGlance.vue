@@ -7,10 +7,11 @@ const { displayNodes, source, lastUpdated } = useClusterNodeStatus();
 const opsLinks = [
   { label: "Runbook", href: "/runbook/", external: false },
   { label: "Project overview", href: "/project", external: false },
+  { label: "Control Center", href: "https://control.eldertree.xyz/", external: true },
   { label: "Build diary", href: "https://blog.eldertree.xyz/", external: true },
   {
-    label: "Live metrics (LAN)",
-    href: "https://grafana.eldertree.local/d/eldertree-ops-home",
+    label: "Grafana",
+    href: "https://grafana.eldertree.xyz/",
     external: true,
   },
 ] as const;
