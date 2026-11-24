@@ -20,6 +20,18 @@ After **1.0.0** release:
 
 ## [Unreleased]
 
+### Added
+
+- **Runbook Console theme** (#11) — sister to the blog's Ops Console (raolivei/pi-fleet-blog#67): JetBrains Mono + Inter, shared dark neutrals, amber accent, dark by default.
+- **Status bar** above the nav; shows readiness only from fetched status data, with its date.
+- **Issue cards** on runbook entries, built from existing frontmatter (ID, severity, category, source, symptoms).
+- **Console home page**: search prompt, category tiles with entry counts and a most-severe-first index, generated from `runbook/issues/**` by `runbook.data.ts`.
+
+### Changed
+
+- Home replaces the default hero and emoji feature cards; the hand-written category table is replaced by generated tiles. Nav gains a Blog link.
+- **Logo** recolored to the amber accent (`scripts/recolor-logo.py` palette updated; output `public/logo.png`).
+
 ### Fixed
 
 - Use public Grafana and Control Center entry points in homepage and project navigation; stop probing a private LAN hostname for public node status.

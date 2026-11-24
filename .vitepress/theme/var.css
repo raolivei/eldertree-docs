@@ -1,0 +1,78 @@
+/**
+ * Eldertree Docs — "Runbook Console" tokens (issue #11).
+ *
+ * Sister theme to the blog's Ops Console (raolivei/pi-fleet-blog#67): the same
+ * neutrals and type, an amber accent instead of green. Dark is the default.
+ */
+
+:root {
+  --rb-ground: #f6f7f9;
+  --rb-surface: #ffffff;
+  --rb-surface-2: #eef1f4;
+  --rb-border: #d6dce3;
+  --rb-border-soft: #e5e9ee;
+  --rb-text: #11161c;
+  --rb-text-2: #3d4753;
+  --rb-text-3: #56616d;
+  --rb-accent: #94560a;
+  --rb-accent-strong: #75430a;
+  --rb-accent-soft: rgba(148, 86, 10, 0.1);
+  --rb-critical: #b42318;
+  --rb-high: #94560a;
+  --rb-medium: #1f5fb4;
+  --rb-ok: #0b7a52;
+  --rb-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --rb-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --vp-font-family-base: var(--rb-sans);
+  --vp-font-family-mono: var(--rb-mono);
+
+  --vp-c-bg: var(--rb-ground);
+  --vp-c-bg-alt: var(--rb-surface);
+  --vp-c-bg-elv: var(--rb-surface);
+  --vp-c-bg-soft: var(--rb-surface-2);
+  --vp-c-divider: var(--rb-border-soft);
+  --vp-c-border: var(--rb-border);
+  --vp-c-gutter: var(--rb-border-soft);
+  --vp-c-text-1: var(--rb-text);
+  --vp-c-text-2: var(--rb-text-2);
+  --vp-c-text-3: var(--rb-text-3);
+
+  --vp-c-brand-1: var(--rb-accent);
+  --vp-c-brand-2: var(--rb-accent-strong);
+  --vp-c-brand-3: var(--rb-accent-strong);
+  --vp-c-brand-soft: var(--rb-accent-soft);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: var(--rb-accent);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: var(--rb-accent-strong);
+  --vp-button-brand-active-bg: var(--rb-accent-strong);
+
+  --vp-code-block-bg: var(--rb-surface);
+  --vp-code-bg: var(--rb-surface-2);
+  --vp-layout-top-height: 32px;
+}
+
+.dark {
+  --rb-ground: #07090c;
+  --rb-surface: #0b0e12;
+  --rb-surface-2: #10151b;
+  --rb-border: #1f2731;
+  --rb-border-soft: #161c24;
+  --rb-text: #e8edf2;
+  --rb-text-2: #b3bdc8;
+  --rb-text-3: #8b96a3;
+  --rb-accent: #f5a524;
+  --rb-accent-strong: #ffc766;
+  --rb-accent-soft: rgba(245, 165, 36, 0.12);
+  --rb-critical: #ff7b72;
+  --rb-high: #f5a524;
+  --rb-medium: #79b8ff;
+  --rb-ok: #3ecf8e;
+
+  --vp-button-brand-text: #1a1203;
+  --vp-button-brand-hover-text: #1a1203;
+}

@@ -1,39 +1,15 @@
 ---
-layout: home
-hero:
-  name: Eldertree Docs
-  text: Cluster Runbook & Documentation
-  tagline: Searchable incident management for the eldertree Kubernetes cluster
-  image:
-    src: /logo.png
-    alt: Eldertree cluster icon
-    width: 280
-    height: 280
-  actions:
-    - theme: brand
-      text: Project overview
-      link: /project
-    - theme: alt
-      text: View Runbook
-      link: /runbook/
-    - theme: alt
-      text: Agent Workflow
-      link: /runbook/workflow
-features:
-  - icon: 🔍
-    title: Searchable Issues
-    details: Full-text search across all known issues, error messages, and symptoms
-  - icon: 🤖
-    title: Agent-Compatible
-    details: Structured format designed for AI agents to quickly find and resolve issues
-  - icon: 📚
-    title: Documented Solutions
-    details: Step-by-step resolution guides with verification commands
+layout: page
+sidebar: false
 ---
+
+<RunbookHome />
+
+<div class="rb-home-notes">
 
 <ClusterGlance />
 
-# Welcome to Eldertree Docs
+## About these docs
 
 This documentation site serves as the incident runbook for the **eldertree** Kubernetes cluster - a k3s cluster running on Raspberry Pi hardware.
 
@@ -58,16 +34,4 @@ Use the search bar (press `/` or `Ctrl+K`) to search for error messages or sympt
 3. Follow the resolution steps
 4. Verify the fix using the provided commands
 
-## Issue Categories
-
-| Category | Description |
-|----------|-------------|
-| DNS | CoreDNS, BIND9, and DNS resolution issues |
-| Cloudflare | Tunnel, DNS, and external access issues |
-| Node | Node health, dual IP, and cluster membership |
-| Boot | Boot failures, NVMe, and system startup |
-| Network | Network connectivity and recovery |
-| Storage | Vault, Longhorn, and persistent storage |
-| SSH | SSH access and authentication |
-
-
+</div>
