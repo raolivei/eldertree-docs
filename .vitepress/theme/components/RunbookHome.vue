@@ -9,6 +9,16 @@ function openSearch() {
 }
 
 const total = data.entries.length;
+
+/** Section anchors on /runbook/ ("#### DNS Issues" → #dns-issues); unknown categories go to "By Category". */
+const ANCHORS: Record<string, string> = {
+  cicd: "ci-cd-issues",
+};
+const RUNBOOK_IDS = ["dns", "cloudflare", "node", "boot", "network", "storage", "ssh", "openclaw"];
+function categoryHref(name: string): string {
+  const anchor = ANCHORS[name] ?? (RUNBOOK_IDS.includes(name) ? `${name}-issues` : "by-category");
+  return withBase(`/runbook/#${anchor}`);
+}
 </script>
 
 <template>
@@ -30,7 +40,7 @@ const total = data.entries.length;
     <section class="rb-section" aria-labelledby="rb-cats">
       <h2 id="rb-cats" class="rb-section__title">› categories</h2>
       <div class="rb-cats">
-        <a v-for="c in data.categories" :key="c.name" class="rb-cat" :href="withBase('/runbook/')">
+        <a v-for="c in data.categories" :key="c.name" class="rb-cat" :href="categoryHref(c.name)">
           <span class="rb-cat__name">{{ c.name }}</span>
           <span class="rb-cat__count">{{ c.count }}</span>
           <span class="rb-cat__sev">
