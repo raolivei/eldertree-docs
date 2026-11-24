@@ -16,6 +16,7 @@ export default defineConfig({
   title: "Eldertree Docs",
   description: "Documentation and incident runbook for the eldertree Kubernetes cluster",
   cleanUrls: true,
+  appearance: "dark",
   lastUpdated: true,
 
   head: [
@@ -34,6 +35,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Project", link: "/project" },
       { text: "Runbook", link: "/runbook/" },
+      { text: "Blog", link: "https://blog.eldertree.xyz/" },
       { text: "Infrastructure", link: "https://github.com/raolivei/pi-fleet" },
     ],
 

@@ -46,6 +46,8 @@ export function useClusterNodeStatus() {
   const source = ref<"static" | "live">("static");
   const lastUpdated = ref<string | null>(null);
   const tiersById = ref<Record<string, NodeTier>>({});
+  /** False until the first refresh finishes, so callers can show "checking". */
+  const checked = ref(false);
 
   const displayNodes = computed<ClusterNodeView[]>(() =>
     cluster.nodes.map((node) => ({
@@ -73,17 +75,19 @@ export function useClusterNodeStatus() {
       tiersById.value = map;
       source.value = "live";
       lastUpdated.value = data.updated ?? null;
+      checked.value = true;
       return;
     }
 
     tiersById.value = Object.fromEntries(cluster.nodes.map((n) => [n.id, n.tier]));
     source.value = "static";
     lastUpdated.value = null;
+    checked.value = true;
   }
 
   onMounted(() => {
     void refresh();
   });
 
-  return { displayNodes, source, lastUpdated, refresh };
+  return { displayNodes, source, lastUpdated, checked, refresh };
 }

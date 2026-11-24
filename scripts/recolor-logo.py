@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Recolor Eldertree logo icon for eldertree-docs (VitePress indigo / periwinkle)."""
+"""Recolor Eldertree logo icon for eldertree-docs (Runbook Console amber, issue #11)."""
 
 from __future__ import annotations
 
@@ -10,11 +10,11 @@ from pathlib import Path
 
 from PIL import Image
 
-# VitePress default dark brand (indigo) — matches docs.eldertree.local
-BRAND_DARK = (62, 99, 221)  # #3e63dd — vp-c-indigo-3 dark
-BRAND_MID = (92, 115, 231)  # #5c73e7 — vp-c-indigo-2 dark
-BRAND_LIGHT = (168, 177, 255)  # #a8b1ff — vp-c-indigo-1 dark
-BRAND_HIGHLIGHT = (199, 210, 254)  # #c7d2fe — highlights on charcoal bg
+# Runbook Console accent (amber) — matches --rb-accent in .vitepress/theme/var.css
+BRAND_DARK = (178, 106, 0)  # #b26a00
+BRAND_MID = (245, 165, 36)  # #f5a524 — --rb-accent (dark)
+BRAND_LIGHT = (255, 199, 102)  # #ffc766 — --rb-accent-strong (dark)
+BRAND_HIGHLIGHT = (255, 226, 168)  # #ffe2a8 — highlights on charcoal bg
 
 
 def lerp(a: tuple[int, int, int], b: tuple[int, int, int], t: float) -> tuple[int, int, int]:
